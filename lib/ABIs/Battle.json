@@ -1,0 +1,993 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "currentCombatId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint8",
+                        "name": "head",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "breed",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "color",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "class",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "armor",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "offhand",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "mainhand",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "level",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "breedRerollCount",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "classRerollCount",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "artStyle",
+                        "type": "uint8"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct IDogewood.Doge2",
+                "name": "doge",
+                "type": "tuple"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeHp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "enemyHp",
+                "type": "uint256"
+            }
+        ],
+        "name": "CombatStart",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "currentCombatId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint8",
+                        "name": "head",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "breed",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "color",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "class",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "armor",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "offhand",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "mainhand",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "level",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "breedRerollCount",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "classRerollCount",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "artStyle",
+                        "type": "uint8"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct IDogewood.Doge2",
+                "name": "doge",
+                "type": "tuple"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeHp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "enemyHp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "enemyClass",
+                "type": "uint8"
+            }
+        ],
+        "name": "CombatStart2",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "currentCombatId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dogeHp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "enemyHp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "lbPoints",
+                "type": "uint256"
+            }
+        ],
+        "name": "CombatWin",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "currentCombatId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "turnId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "attackerType",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "baseDamage",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isCriticalDamage",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "rollDodge",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "defenderHp",
+                        "type": "uint256"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct BattlePoly.CombatDamageDodgeLog",
+                "name": "damageDodgeLog",
+                "type": "tuple"
+            }
+        ],
+        "name": "RollDamageDodge",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "currentCombatId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "turnId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8[2]",
+                "name": "playerTypes",
+                "type": "uint8[2]"
+            }
+        ],
+        "name": "TurnOrder",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "PERCENT_MULTIPLIER",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "_currentCombatId",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "_dogeLastScore",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "level_",
+                "type": "uint16"
+            }
+        ],
+        "name": "_getGroupIndex",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "groupIndex_",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "admin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "name": "breedInfo",
+        "outputs": [
+            {
+                "internalType": "int256",
+                "name": "paw",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "heart",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "smarts",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "speed",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "hunt",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "nose",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "wag",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "luck",
+                "type": "int256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "name": "classInfo",
+        "outputs": [
+            {
+                "internalType": "enum BattlePoly.AttackTypes",
+                "name": "attackType",
+                "type": "uint8"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "int256",
+                        "name": "paw",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "heart",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "smarts",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "speed",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hunt",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "nose",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "wag",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "luck",
+                        "type": "int256"
+                    }
+                ],
+                "internalType": "struct BattlePoly.StatInfo",
+                "name": "statInfo",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "dogeId",
+                "type": "uint256"
+            }
+        ],
+        "name": "combatSingle",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "dogewood",
+        "outputs": [
+            {
+                "internalType": "contract IDogewood",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "dogewood_",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "vrf_",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "quest_",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "",
+                "type": "uint16"
+            }
+        ],
+        "name": "levelInfo",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "treat",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "heroStatPoints",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "enum BattlePoly.PolicyVariables",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "name": "policyVariables",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "quest",
+        "outputs": [
+            {
+                "internalType": "contract QuestLike",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "level_",
+                "type": "uint16"
+            },
+            {
+                "internalType": "uint8",
+                "name": "classFrom_",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint8",
+                "name": "classTo_",
+                "type": "uint8"
+            }
+        ],
+        "name": "resetStatInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint8",
+                "name": "breed_",
+                "type": "uint8"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "int256",
+                        "name": "paw",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "heart",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "smarts",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "speed",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hunt",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "nose",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "wag",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "luck",
+                        "type": "int256"
+                    }
+                ],
+                "internalType": "struct BattlePoly.StatInfo",
+                "name": "stat_",
+                "type": "tuple"
+            }
+        ],
+        "name": "setBreedInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint8",
+                "name": "class_",
+                "type": "uint8"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "enum BattlePoly.AttackTypes",
+                        "name": "attackType",
+                        "type": "uint8"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "int256",
+                                "name": "paw",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "heart",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "smarts",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "speed",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "hunt",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "nose",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "wag",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "luck",
+                                "type": "int256"
+                            }
+                        ],
+                        "internalType": "struct BattlePoly.StatInfo",
+                        "name": "statInfo",
+                        "type": "tuple"
+                    }
+                ],
+                "internalType": "struct BattlePoly.ClassInfo",
+                "name": "stat_",
+                "type": "tuple"
+            }
+        ],
+        "name": "setClassInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "level_",
+                "type": "uint16"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "treat",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "heroStatPoints",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct BattlePoly.LevelInfo",
+                "name": "info_",
+                "type": "tuple"
+            }
+        ],
+        "name": "setLevelInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "level_",
+                "type": "uint16"
+            },
+            {
+                "internalType": "uint8",
+                "name": "class_",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint8",
+                "name": "breed_",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint8",
+                "name": "playerType_",
+                "type": "uint8"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "int256",
+                        "name": "paw",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "heart",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "smarts",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "speed",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hunt",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "nose",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "wag",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "luck",
+                        "type": "int256"
+                    }
+                ],
+                "internalType": "struct BattlePoly.StatInfo",
+                "name": "stat_",
+                "type": "tuple"
+            }
+        ],
+        "name": "setStatInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint16",
+                "name": "",
+                "type": "uint16"
+            },
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "name": "statInfo",
+        "outputs": [
+            {
+                "internalType": "int256",
+                "name": "paw",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "heart",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "smarts",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "speed",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "hunt",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "nose",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "wag",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "luck",
+                "type": "int256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "perc_",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint16",
+                "name": "levelFrom_",
+                "type": "uint16"
+            },
+            {
+                "internalType": "uint16",
+                "name": "levelTo_",
+                "type": "uint16"
+            }
+        ],
+        "name": "updateEnemyStatPointsPercent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "vrf",
+        "outputs": [
+            {
+                "internalType": "contract IVRF",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

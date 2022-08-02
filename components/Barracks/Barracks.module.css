@@ -1,0 +1,578 @@
+.barracks_wrapper {
+  width: 100%;
+  margin-top: 2rem;
+}
+.barracks_container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.barracks_container h1 {
+  color: #fff;
+  font-size: 4rem;
+}
+.barracks_nav {
+  min-height: 50px;
+  /* background: orange; */
+  border-top: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.barracks_nav .nav_title {
+  color: #fff;
+}
+.barracks_nav .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left .owned {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  color: #fff;
+}
+.owned .count {
+  font-size: 24px;
+}
+.barracks_nav .left .owned_s {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-right: 8px;
+}
+.barracks_nav .left .staked {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+.barracks_nav .left h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 8px;
+  font-weight: 600;
+}
+.barracks_nav .right {
+  display: flex;
+  margin-top: 0.75rem;
+}
+.barracks_nav .right input {
+  border: 1px solid #fff;
+  background: #000;
+  padding: 4px 6px;
+  padding-left: 1rem;
+  width: 150px;
+  color: #fff;
+}
+.barracks_nav .right input::placeholder {
+  color: #fff;
+}
+
+.barracks_nav .right form {
+  display: flex;
+}
+.barracks_nav .right form label {
+  color: #fff;
+  margin-right: 5px;
+  margin: 0;
+}
+.barracks_nav .right form select {
+  color: #fff;
+  background: #000;
+  width: 150px;
+  padding: 4px 6px;
+  border: 1px solid #fff;
+  margin-left: 1rem;
+}
+.card_wrapper {
+  padding: 1.5rem 0;
+  display: flex;
+  grid-template-rows: repeat((auto-fit, 1fr));
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+  min-height: 435px;
+}
+
+.card {
+  width: 280px;
+  border: 4px solid #fff;
+  text-align: center;
+  position: relative;
+}
+.selected_card {
+  width: 280px;
+  border: 4px solid #fff;
+  text-align: center;
+  position: relative;
+  background: rgb(94, 21, 21);
+}
+
+.card_options,
+.selected_card .card_options {
+  position: absolute;
+  color: #fff;
+  top: 2rem;
+  right: -4rem;
+  border: 1px solid #fff;
+  background: #000;
+  z-index: 100;
+}
+
+.card_options .sub_menu ul,
+.selected_card .card_options .sub_menu ul {
+  position: absolute;
+  border: 1px solid #fff;
+  background: #000;
+  right: -100%;
+  bottom: 0;
+  z-index: 200;
+}
+
+.card_options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.card_options ul li {
+  font-size: 13px;
+  padding: 4px 0;
+  padding: 4px 1rem;
+}
+.card_options ul li:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+.top_level_holder {
+  position: relative;
+}
+
+.threedots {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* .card .threedots,
+.selected_card .threedots {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+} */
+
+.card_wrapper .card .thumbnail,
+.card_wrapper .selected_card .thumbnail {
+  text-align: center;
+  line-height: 1;
+}
+
+.card_wrapper .card .thumbnail img,
+.card_wrapper .selected_card .thumbnail img {
+  width: 200px;
+}
+
+.card_wrapper .card p,
+.card_wrapper .selected_card p {
+  color: #ccc;
+}
+
+.card_wrapper .card .text1,
+.card_wrapper .selected_card .text1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card_wrapper .card .text2,
+.card_wrapper .selected_card .text2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.card_wrapper .card .text3,
+.card_wrapper .selected_card .text3 {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #ccc;
+  border-top: 1px solid #ccc;
+  display: inline;
+  padding-top: 6px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fff;
+  color: #000;
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 4px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.traits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+}
+
+.traitType {
+  background: #2e2e2e;
+  border: 2px solid #ccc;
+  color: white;
+}
+
+.traitTypeLabel {
+  font-size: 12px;
+  color: white;
+}
+
+.traitTypeValue {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.menuItemDisabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.barracks_stats {
+  min-height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.barracks_stats .stats_left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barracks_stats .stats_left h4,
+.barracks_stats .stats_left p span {
+  color: #fff;
+}
+
+.barracks_stats .stats_left p span {
+  font-size: 14px;
+}
+
+.barracks_stats .stats_left p {
+  color: #8c8c8c;
+  font-weight: 600;
+}
+
+.owned .stats_left {
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.owned .stats_left h4,
+.owned .stats_left p span {
+  color: #fff;
+}
+
+.owned .stats_left p span {
+  font-size: 14px;
+}
+
+.owned .stats_left p {
+  color: #8c8c8c;
+  font-weight: 600;
+}
+
+.stats_left .owned button,
+.stats_left .staked button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  margin-top: 7px;
+}
+
+.stats_left .staked button {
+  margin-right: 7px;
+}
+
+.barracks_stats .stats_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /* text-align: right; */
+}
+.barracks_stats .stats_right p {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.barracks_stats .stats_right h4 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.barracks_stats .stats_right .other_stats {
+  display: flex;
+  text-align: right;
+  align-items: center;
+}
+.barracks_stats .stats_right .other_stats p {
+  margin: 0 4px;
+}
+
+.barracks_stats .stats_right .other_stats p span {
+  color: #fff;
+}
+
+.barracks_stats .stats_right button {
+  font-size: 15px;
+  color: #fff;
+  background: #fa9223;
+  padding: 6px 12px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+/* .barracks_stats .stats_right button {
+  display: inline-block;
+  width: 200px;
+} */
+
+.barracks_nav .left {
+  width: 50%;
+}
+
+.filter {
+  width: 100%;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+.filter select {
+  color: #fff;
+  background: #000;
+  width: 150px;
+  padding: 4px 6px;
+  border: 1px solid #fff;
+  margin-left: 1rem;
+}
+
+.filter .activeFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 200px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 8px;
+  /* padding: 0 1rem; */
+  border: 1px solid orange;
+}
+
+.filter .filter_title {
+  display: flex;
+  justify-content: space-around;
+  margin: 6px 0;
+}
+
+.filter .filter_title p {
+  color: #fff;
+}
+.filter .filter_title p:nth-child(2) {
+  color: #000;
+  padding: 2px 7px;
+  font-size: 13px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filter .activeFilters span {
+  color: #fff;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  margin: 3px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.filter .activeFilters span .icon {
+  position: absolute;
+  right: 8px;
+  top: 3px;
+  /* color: red; */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .barracks_wrapper {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .barracks_nav {
+    padding: 8px 6px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .barracks_nav .right {
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .barracks_nav .nav_title {
+    width: 120px;
+  }
+
+  .barracks_nav .left {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  .left .owned {
+    width: 100%;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter select {
+    margin: 5px 0;
+  }
+
+  .filter .activeFilters span {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 5px;
+  }
+
+  .filter .activeFilters span .icon {
+    position: relative;
+    margin-left: 5px;
+    right: 0;
+    top: 0;
+  }
+
+  .barracks_nav .right form {
+    flex-direction: column;
+  }
+
+  .barracks_nav .right form select {
+    width: 150px;
+    margin: 0;
+  }
+
+  .barracks_nav .right input {
+    border: 1px solid #fff;
+    background: #000;
+    padding: 4px 6px;
+    padding-left: 1rem;
+    width: 130px;
+    color: #fff;
+  }
+  .barracks_nav .right form select {
+    color: #fff;
+    background: #000;
+    width: 130px;
+    padding: 4px 6px;
+    margin-top: 1rem;
+  }
+
+  .card_wrapper {
+    justify-content: space-around;
+  }
+
+  .card_options {
+    position: absolute;
+    color: #fff;
+    top: 2rem;
+    right: 1.5rem;
+    border: 1px solid #fff;
+    background: #000;
+    z-index: 100;
+  }
+  .barracks_stats .stats_left {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 8px;
+  }
+  .barracks_stats .stats_right {
+    padding-right: 7px;
+  }
+}
+
+
+.tired_status {
+  position: relative;
+}
+.tired_status .icon {
+  position: absolute;
+  z-index: 50;
+  left: 8px;
+  top: 8px;
+  font-size: 25px;
+  cursor: pointer;
+ 
+}
+.tired_status .icon:hover ~ .info_box {
+  display: block;
+}
+.info_box {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 12px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-radius: 4px;
+  display: none;
+  z-index: 50;
+  color: #fff;
+}
+.info-box h3 {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.info-box p {
+  line-height: 1.2;
+  font-size: 13px;
+  color: #eee;
+  
+}
+
+.info-box p span {
+  font-size: 14px;
+  color: #eee;
+  font-weight: bold;
+}

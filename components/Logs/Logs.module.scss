@@ -1,0 +1,266 @@
+.logs_wrapper {
+  width: 100%;
+  min-height: 94vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))
+      center/cover,
+    url("/bg/training_ground.png") center/cover;
+
+  h1 {
+    color: #fff;
+    font-size: 48px;
+  }
+  .table {
+    width: 100%;
+    // height: 700px;
+    min-height: 50px;
+    max-height: 600px;
+    overflow-y: scroll;
+    margin-top: 2rem;
+
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    &::-webkit-scrollbar {
+      width: 9px; /* width of the entire scrollbar */
+      height: 9px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(196, 196, 196, 0.5); /* color of the tracking area */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c4c4c4; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      // border: 1px solid #777;
+    }
+    @media (max-width: 768px) {
+      margin-left: 0rem;
+      margin-top: 2rem;
+      overflow-x: scroll;
+    }
+    .loading {
+      color: #fff;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .leaderboard_table {
+      width: 100%;
+      color: #eee;
+      position: relative;
+      min-width: 600px;
+
+      thead {
+        background: transparent;
+        padding: 8px 0;
+        td {
+          font-weight: 600;
+          font-size: 16px;
+          padding: 0.6rem;
+          color: #8f9794;
+        }
+        .col_one {
+          opacity: 0;
+        }
+        // .col_two {
+        //   width: 300px;
+        //   @media (max-width: 768px) {
+        //     width: 10px;
+        //   }
+        // }
+        // .col_three {
+        //   width: 10px;
+        // }
+        .col_seven {
+          opacity: 0;
+        }
+      }
+      tbody {
+        tr:nth-child(odd) {
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .difficulty {
+          display: flex;
+          align-items: flex-start;
+          height: 100%;
+          margin-top: 0.6rem;
+
+          img {
+            margin-right: 12px;
+            margin-bottom: 5px;
+          }
+          span {
+            text-transform: capitalize;
+          }
+        }
+        .doge_sent {
+          img {
+            height: 40px;
+            width: 30px;
+          }
+        }
+        td {
+          //   padding: 5px 0;
+          padding: 0 0.6rem;
+          font-weight: 500;
+
+          img {
+            height: 25px;
+            width: 25px;
+          }
+        }
+        .details {
+          color: #f79226;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.log_detail_wrapper {
+  width: 100%;
+  min-height: 94vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))
+      center/cover,
+    url("/bg/training_ground.png") center/cover;
+
+  //   background: red;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .left {
+      h3 {
+        color: #808080;
+        font-size: 20px;
+      }
+      h1 {
+        color: #fff;
+        font-size: 60px;
+      }
+      .difficulty {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 768px) {
+          margin: 0.8rem 0;
+        }
+        .label {
+          color: #575757;
+          font-weight: bold;
+        }
+        .value {
+          color: #fff;
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+        img {
+          margin: 0 8px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      p {
+        color: #808080;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      h2 {
+        color: #fff;
+        font-size: 60px;
+      }
+    }
+  }
+  .battle_log_section {
+    max-width: 900px;
+    margin: 3rem auto;
+    .log_header {
+      p {
+        color: #808080;
+        font-weight: bold;
+      }
+
+      .doge {
+        display: flex;
+        margin-top: 1rem;
+        img {
+          // height: 100px;
+          // width: 75px;
+          height: 100%;
+          width: 100%;
+        }
+        .name {
+          margin: 3.5rem 0 0 12px;
+          p {
+            color: #fff;
+          }
+          span {
+            color: #808080;
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .logs_section {
+      margin-top: 1.5rem;
+      max-height: 500px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 9px; /* width of the entire scrollbar */
+        height: 9px;
+      }
+      &::-webkit-scrollbar-track {
+        background: rgba(196, 196, 196, 0.5); /* color of the tracking area */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c4c4c4; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        // border: 1px solid #777;
+      }
+      h3 {
+        color: #808080;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      p {
+        color: #fff;
+        margin-top: 8px;
+        // font-weight: bold;
+      }
+      .turn {
+        margin: 1.5rem 0;
+        span {
+          background: #fff;
+          color: #000;
+          font-size: 15px;
+          font-weight: bold;
+          border-radius: 25px;
+          padding: 4px 10px;
+        }
+        div {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  @media (max-width: 768px) {
+    padding: 3rem 4px 0 4px;
+  }
+}

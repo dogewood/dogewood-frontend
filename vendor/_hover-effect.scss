@@ -1,0 +1,31 @@
+.hover-effect1:hover {
+    transform: translateY(-3px);
+}
+
+.hover-effect1:active {
+    transform: translateY(-1px);
+}
+
+.hover-effect2:hover {
+    transform: scale(0.98);
+}
+
+.hover-effect2:active {
+    transform: translateY(2px);
+}
+
+.hover-effect3:hover {
+    transform: scale(0.98);
+}
+
+.hover-effect3:active {
+    transform: rotate(-1deg) scale(0.95);
+}
+
+.hover-effect4:hover {
+    transform: rotate(2deg);
+}
+
+.hover-effect4:active {
+    transform: rotate(2deg) scale(0.95);
+}

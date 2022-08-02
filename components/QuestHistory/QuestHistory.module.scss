@@ -1,0 +1,168 @@
+.leaderboard_wrapper {
+    width: 100%;
+    min-height: 90vh;
+    // background: url("/bg/training_ground.png") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+        center/cover,
+      url("/bg/training_ground.png") center/cover;
+  
+    // margin: 0 auto;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        padding: 0 6px;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 2rem;
+        .title {
+          h1 {
+            color: #fff;
+            font-size: 4rem;
+            text-transform: uppercase;
+            @media (max-width: 768px) {
+              font-size: 3.5rem;
+            }
+          }
+        }
+        .calendar {
+            margin-top: 8px;
+            position: relative;
+            input {
+                border-radius: 6px;
+                border: 1px solid rgba(255, 255, 255, .1);
+                background: rgba(255, 255, 255, .04);
+                padding: 6px 8px;
+                width: 150px;
+                padding-left: 2rem;
+                color: #fff;
+                font-weight: 600;
+                position: relative;
+                &::placeholder {
+                  color: #ddd;
+                }
+                &::selection {
+                  background: none;
+                  color: none;
+                }
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+              background: transparent;
+              bottom: 0;
+              color: transparent;
+              cursor: pointer;
+              height: auto;
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: auto;
+          }
+          }
+        
+        
+      }
+      .table_sidenav_container {
+        display: flex;
+        margin-top: 4rem;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          margin-top: 1rem;
+        }
+  
+        
+        .table {
+          width: 100%;
+          // height: 700px;
+          min-height: 300px;
+          max-height: 600px;
+          overflow-y: scroll;
+  
+          margin-left: 2rem;
+          margin-bottom: 2rem;
+          &::-webkit-scrollbar {
+            width: 9px; /* width of the entire scrollbar */
+            height: 9px;
+          }
+          &::-webkit-scrollbar-track {
+            background: rgba(196, 196, 196, 0.5); /* color of the tracking area */
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #c4c4c4; /* color of the scroll thumb */
+            border-radius: 20px; /* roundness of the scroll thumb */
+            // border: 1px solid #777;
+          }
+          @media (max-width: 768px) {
+            margin-left: 0rem;
+            margin-top: 2rem;
+            overflow-x: scroll;
+          }
+          .loading {
+            color: #fff;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 18px;
+          }
+          .leaderboard_table {
+            width: 100%;
+            color: #eee;
+            position: relative;
+            min-width: 600px;
+  
+            thead {
+              background: transparent;
+              padding: 8px 0;
+              td {
+                font-weight: 600;
+                font-size: 18px;
+                padding: 0.6rem;
+                img {
+                  height: 30px;
+                  width: 30px;
+                }
+              }
+              .col_one {
+                width: 10px;
+              }
+              .col_two {
+                width: 300px;
+                @media (max-width: 768px) {
+                  width: 10px;
+                }
+              }
+              .col_three {
+                width: 10px;
+              }
+              .col_four {
+                width: 80px;
+                opacity: 0;
+              }
+            }
+            tbody {
+              tr:nth-child(odd) {
+                background: rgba(255, 255, 255, 0.1);
+              }
+              tr {
+                .details {
+                  color: #f79226;
+                  font-weight: 600;
+                }
+              }
+              td {
+                padding: 5px 0;
+                padding: 0.6rem;
+                img {
+                
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,23 @@
+.imgContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.imgContent .placeHolder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: var(--color-black2);
+}
+
+.imgContent .placeHolder img {
+  width: 120px;
+}
+
+.nftContent .nftImg {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 5px;
+}

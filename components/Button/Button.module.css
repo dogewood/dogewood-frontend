@@ -1,0 +1,25 @@
+.button {
+  padding: 5px;
+  font-size: 16px !important;
+  letter-spacing: 0.4px;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  background: transparent;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+.main-btn {
+  background: #f79226;
+  color: #fff;
+  /* font-weight: bold; */
+  padding: 8px 12px;
+  border-radius: 25px;
+}
+

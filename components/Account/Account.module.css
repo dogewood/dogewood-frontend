@@ -1,0 +1,39 @@
+.account {
+  display: block;
+  background: #FFA113;
+  padding: 15px 18px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.account:hover {
+  box-shadow: 0px 3px 42px rgba(141, 98, 214, 0.55);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tokenIcon {
+  width: 32px;
+  height: 32px;
+  margin-left: var(--padding-narrow);
+  margin-right: calc(var(--padding-normal) * 1.5);
+}
+
+@media all and (max-width: 767px) {
+  .account {
+    width: 140px;
+    padding: 10px;
+  }
+  .info > div {
+    font-size: 12px;
+  }
+  .tokenIcon {
+    margin-left: var(--padding-narrow);
+    margin-right: var(--padding-narrow);
+  }
+}

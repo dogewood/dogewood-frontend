@@ -1,0 +1,390 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--z-top) + 1);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 568px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid #fff;
+  min-height: 200px;
+  overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    overflow-x: scroll;
+  }
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+}
+.wrapper::-webkit-scrollbar-track {
+  background: #ccc; /* color of the tracking area */
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #fff; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid orange; /* creates padding around scroll thumb */
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.loading {
+  margin-top: 0;
+}
+
+.pending {
+  position: relative;
+  z-index: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.buyForm {
+  position: relative;
+  width: 425px;
+  margin: 0 10px;
+  padding: 36px 24px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 44px #000000);
+}
+
+@media all and (max-width: 767px) {
+  .buyForm {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.formWrapper {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.formWrapper .label {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-white);
+  font-family: var(--font-family-roboto);
+}
+
+.formWrapper .ethBalance {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--font-family-roboto);
+  color: var(--color-white);
+}
+
+.formWrapper .counter .minus,
+.plus {
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--color-white);
+}
+
+.formWrapper .counter .disabled {
+  color: var(--color-gray-2);
+  cursor: not-allowed;
+}
+
+.formWrapper .counter .amount {
+  width: 70px;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--color-white);
+  text-align: center;
+  font-family: var(--font-family-roboto);
+}
+
+.formWrapper .maxBtn {
+  background: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 13px 10px;
+  color: #3f3f75;
+  cursor: pointer;
+  font-family: var(--font-family-roboto);
+}
+
+.form button {
+  width: 100%;
+  height: 56px;
+  background: #ffa113;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-top: 24px;
+  outline: none;
+  font-family: var(--font-family-roboto);
+}
+
+.form button:hover {
+  box-shadow: 0px 3px 42px rgba(255, 161, 19, 0.55);
+  background-color: #ffa113;
+  color: #ffffff;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 230px;
+  margin: 3rem auto 0 auto;
+}
+
+.confirmButton {
+  height: 56px;
+  background: #ffa113;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-top: 24px;
+  outline: none;
+  font-family: var(--font-family-roboto);
+  padding: 5px 20px;
+}
+.confirmButton:hover {
+  box-shadow: 0px 3px 10px rgba(255, 161, 19, 0.55);
+  background-color: #ffa113;
+  color: #ffffff;
+}
+
+.cancelButton {
+  height: 56px;
+  background: #949494;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-top: 24px;
+  outline: none;
+  font-family: var(--font-family-roboto);
+  padding: 5px 20px;
+}
+.cancelButton:hover {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.35);
+  background-color: #777777;
+}
+
+.progressBar {
+  margin-top: 24px;
+}
+
+.progressBar .progressPercent {
+  margin-bottom: 13px;
+}
+
+.progressBar .progressPercent .label {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-white);
+  font-family: var(--font-family-roboto);
+}
+
+.progressBar .progressPercent .percent {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.bridgeModal {
+  background: #000;
+  color: #fff;
+  border-radius: 0;
+  padding: 36px;
+  overflow-y: scroll;
+}
+
+.bridgeHistoryModal {
+  max-width: 98%;
+  width: 1000px;
+}
+
+.bridgeModal .birdgeModalBody {
+}
+
+.bridgeModal .bridgeModalContent {
+  background: unset;
+  text-align: center;
+}
+
+.bridgeModal .bridgeModalContent h1 {
+  margin-bottom: 12px;
+}
+
+.bridgeModal .bridgeModalContent p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  font-family: var(--font-family-roboto);
+}
+
+.bridgeModalContent .bridgeModalInput input {
+  background: transparent;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  border: 1px solid #fff;
+  margin-right: 24px;
+}
+
+.bridgeModalContent .renameModalInput input {
+  width: 280px;
+  max-width: 100%;
+  background: transparent;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  border: 1px solid #fff;
+  /* margin-right: 24px; */
+}
+
+.bridgeModalContent .bridgeModalInput span {
+  opacity: 0.5;
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bridgeModalContent .bridgeModalActions {
+  display: block;
+  margin-top: 24px;
+}
+
+.bridgeModalContent .bridgeModalCancel {
+  color: var(--color-white);
+  background: none;
+  outline: none;
+  padding: 5px 20px;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 800;
+  height: 40px;
+  width: 84px;
+}
+
+.bridgeModalContent .bridgeModalConfirm {
+  color: var(--color-white);
+  background: #d89634;
+  outline: none;
+  padding: 5px 20px;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 800;
+  height: 40px;
+  min-width: 84px;
+}
+
+.bridgeHistoryModal .btnFinalize {
+  background: #2ecc34;
+  border-radius: 40px;
+  color: #fff;
+  padding: 2px 16px;
+  font-family: var(--font-family-roboto);
+}
+
+.bridgeHistoryModal .btnFinalize:disabled {
+  opacity: 0.7;
+}
+
+.bridgeHistoryModal .txHash {
+  color: #ffa113;
+  text-decoration: underline;
+}
+
+.txModal {
+  z-index: calc(var(--z-top) + 100);
+  overflow: hidden;
+}
+@media all and (max-width: 767px) {
+  .formWrapper .label {
+    font-size: 12px;
+  }
+
+  .formWrapper .ethBalance {
+    font-size: 12px;
+  }
+
+  .formWrapper .counter .minus,
+  .plus {
+    font-size: 32px;
+  }
+}
+
+/* Bridege History styles */
+.historyTable {
+  min-height: 350px;
+  /* background: orange; */
+  width: 500px;
+}
+
+/* Refresh Modal */
+.refresh_modal {
+  background: rgba(0, 0, 0, 0.8);
+  height: 325px;
+}
+.refresh_modal_content h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.refresh_modal_content .info {
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 18px;
+}
+
+.refresh_modal_content .info p {
+  line-height: 1.5;
+}
+
+.refresh_modal_content .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.refresh_modal_content .buttons button:nth-child(1) {
+  background: transparent;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+.refresh_modal_content .buttons button:nth-child(2) {
+  background: #f79226;
+  color: #fff;
+  /* font-weight: bold; */
+  padding: 8px 12px;
+  border-radius: 25px;
+}
